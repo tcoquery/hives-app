@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import NewHiveView from '../views/NewHiveView.vue'
+import NewHiveView from '../components/NewHiveForm.vue'
 import HiveView from '../views/HiveView.vue'
 
 const router = createRouter({
@@ -10,11 +10,6 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: HomeView
-    },
-    {
-      path: '/new',
-      name: 'new-hive',
-      component: NewHiveView
     },
     {
       path: '/hives/:id',

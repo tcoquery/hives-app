@@ -1,10 +1,8 @@
 <template>
   <div>
     <div class="container mx-auto">
-      <h1 class="text-3xl font-bold text-gray-900 text-center py-6">My hives</h1>
-      <div class="my-6">
-        <RouterLink to="/new" class="focus:outline-none bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">Add a hive</RouterLink>
-      </div>
+      <NewHiveForm @update-hives="updateHives" />
+      <h1 class="text-3xl font-bold text-gray-900 text-start py-6">My hives</h1>
       <div class="grid grid-cols-4 gap-4">
         <HiveCard 
           v-for="(hive, index) in hives" 
@@ -19,6 +17,7 @@
 
 <script setup>
   import HiveCard from '../components/HiveCard.vue';
+  import NewHiveForm from '@/components/NewHiveForm.vue';
   import { ref, onMounted } from 'vue';
 
   const hives = ref([]);
@@ -27,4 +26,9 @@
     const response = await fetch("http://localhost:3000/hives");
     hives.value = await response.json();
   });
+
+  const updateHives = (newHive) => {
+    hives.value.push(newHive);
+  };
+
 </script>
