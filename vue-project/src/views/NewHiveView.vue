@@ -17,6 +17,18 @@
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5"/>
         <p v-if="isHiveWeightInvalid" id="error" class="mt-2 text-xs text-red-600">The hive weight cannot be negative </p>
     </div>
+    <div class="mb-5">
+      <label for="bee_species" class="block mb-2 text-sm font-medium text-gray-900 ">Hive's bee species</label>
+      <select
+        v-model="bee_species"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      >
+        <option value="Apis mellifera">Apis mellifera</option>
+        <option value="Bombus terrestris">Bombus terrestris</option>
+        <option value="Megachile rotundata">Megachile rotundata</option>
+        <option value="Xylocopa violacea">Xylocopa violacea</option>
+      </select>
+    </div>
     <div class="text-center">
       <RouterLink to="/" class="text-black border-2 border-blue-700 hover:bg-blue-700 hover:text-white font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 mr-3 text-center">Back</RouterLink>
       <button :disabled="isHiveNameInvalid || isHiveWeightInvalid" @click="addHive" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Save hive</button>
@@ -29,6 +41,7 @@
 
   const name = ref('');
   const weight = ref(0);
+  const bee_species = ref('Apis mellifera');
 
   const addHive = async() => {
     const response = await fetch('http://localhost:3000/hives', {
@@ -38,13 +51,15 @@
       },
       body: JSON.stringify({
         name: name.value,
-        weight: weight.value
+        weight: weight.value,
+        bee_species: bee_species.value
       })
     });
 
     if (response.ok) {
       name.value = '';
       weight.value = 0;
+      bee_species.value = "Apis mellifera";
     }
   };
 

@@ -22,10 +22,9 @@
   import { ref, onMounted } from 'vue';
 
   const hives = ref([]);
-  const API_URL = 'http://localhost:3000/hives';
 
   onMounted(async () => {
-    const response = await fetch(API_URL);
+    const response = await fetch("http://localhost:3000/hives");
     hives.value = await response.json();
   });
 </script>
