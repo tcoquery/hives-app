@@ -1,11 +1,15 @@
 <script setup>
-import { RouterView } from 'vue-router'
+  import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <RouterView />
+  <div class="bg-slate-100 h-full">
+    <RouterView />
+  </div>
 </template>
 
 <style scoped>
-
+  html, body {
+  height: 100vh;
+  }
 </style>
