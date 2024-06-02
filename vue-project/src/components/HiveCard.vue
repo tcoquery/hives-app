@@ -6,6 +6,7 @@
         </div>
         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Weight: {{ hive.weight }} kg</p>
         <div class="text-end">
+            <RouterLink :to="{ name: 'edit-hive', params: { id: hive.id } }" class="bg-white border-2 border-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-3">Edit</RouterLink>
             <RouterLink :to="{ name: 'get-hive', params: { id: hive.id } }" class="bg-yellow-500 hover:bg-yellow-600 focus:outline-none focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:focus:ring-yellow-900">See</RouterLink>
         </div>
     </div>
