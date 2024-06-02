@@ -38,10 +38,12 @@
 
 <script setup>
   import { ref, computed } from 'vue';
+  import { useRouter } from 'vue-router'
 
   const name = ref('');
   const weight = ref(0);
   const bee_species = ref('Apis mellifera');
+  const route = useRouter();
 
   const addHive = async() => {
     const response = await fetch('http://localhost:3000/hives', {
@@ -57,9 +59,7 @@
     });
 
     if (response.ok) {
-      name.value = '';
-      weight.value = 0;
-      bee_species.value = "Apis mellifera";
+      route.push('/');
     }
   };
 
