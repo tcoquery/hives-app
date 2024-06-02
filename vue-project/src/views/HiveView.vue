@@ -48,6 +48,7 @@
     });
 
     const deleteHive = async() => {
+        confirm("Are you sure you want to delete this hive?");
         await fetch('http://localhost:3000/hives/' + id, {
             method: 'DELETE'
         });

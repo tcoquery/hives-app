@@ -1,6 +1,6 @@
 <template>
-  <div class="mx-auto">
-    <h1 class="text-3xl font-bold text-gray-900 py-6">Add a new hive</h1>
+  <h1 class="text-3xl font-bold text-gray-900 py-6">Add a new hive</h1>
+  <form class="mx-auto">
     <div class="mb-5">
       <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Your hive name (6 characters minimum)</label>
       <input type="text"
@@ -32,7 +32,7 @@
     <div class="text-center">
       <button :disabled="isHiveNameInvalid || isHiveWeightInvalid" @click="addHive" class="text-black bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Save hive</button>
     </div>
-  </div>
+  </form>
 </template>
 
 <script setup>

@@ -11,7 +11,7 @@
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/your-repo.git
+    git clone https://github.com/tcoquery/hives-app.git
     cd hives-app
     ```
 
@@ -24,6 +24,7 @@
 3. Install frontend dependencies:
 
     ```bash
+    cd vue-project
     npm i
     ```
 

@@ -17,7 +17,7 @@
 
 <script setup>
   import HiveCard from '../components/HiveCard.vue';
-  import NewHiveForm from '@/components/NewHiveForm.vue';
+  import NewHiveForm from '../components/NewHiveForm.vue';
   import { ref, onMounted } from 'vue';
 
   const hives = ref([]);
