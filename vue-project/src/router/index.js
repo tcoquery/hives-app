@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-import NewHiveView from '../components/NewHiveForm.vue'
 import HiveView from '../views/HiveView.vue'
 
 const router = createRouter({

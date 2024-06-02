@@ -61,7 +61,7 @@
   };
 
   const isHiveNameInvalid = computed(() => (name.value.trim().length > 0 && name.value.trim().length < 6));
-  const isHiveWeightInvalid = computed(() => weight.value < 1);
+  const isHiveWeightInvalid = computed(() => weight.value < 0);
 </script>
 
 <style>
