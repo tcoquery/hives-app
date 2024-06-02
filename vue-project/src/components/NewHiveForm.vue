@@ -30,7 +30,7 @@
       </select>
     </div>
     <div class="text-center">
-      <button :disabled="isHiveNameInvalid || isHiveWeightInvalid" @click="addHive" class="text-white bg-yellow-600 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Save hive</button>
+      <button :disabled="isHiveNameInvalid || isHiveWeightInvalid" @click="addHive" class="text-black bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Save hive</button>
     </div>
   </div>
 </template>
