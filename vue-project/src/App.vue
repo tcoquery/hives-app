@@ -3,17 +3,18 @@
 </script>
 
 <template>
-  <div class="bg-slate-100 h-full">
-    <RouterView />
-  </div>
+  <RouterView />
 </template>
 
 <style scoped>
   html, body {
-    height: 100vh;
+    margin:0;
+    padding:0;
+    height:100vh;
   }
 
   #app {
-    height: 100vh;
+    color: blue;
+    background-color: red;
   }
 </style>
