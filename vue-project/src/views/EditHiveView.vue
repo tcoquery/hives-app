@@ -6,6 +6,8 @@
         <input type="text"
           v-model="hive.name"
           placeholder="Name" 
+          required
+          minlength="6"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5"/>
       </div>
       <div class="mb-5">
@@ -13,6 +15,8 @@
         <input type="number"
           v-model="hive.weight"
           placeholder="weight" 
+          required
+          min="0"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5"/>
       </div>
       <div class="mb-5">
@@ -34,7 +38,7 @@
 </template>
 
 <script setup>
-    import { ref, onMounted } from 'vue';
+    import { ref, onMounted, computed } from 'vue';
     import { useRoute, useRouter } from 'vue-router';
 
     const route = useRoute();

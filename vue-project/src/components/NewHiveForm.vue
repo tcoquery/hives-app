@@ -6,6 +6,8 @@
       <input type="text"
         v-model="name"
         placeholder="Name" 
+        required
+        minlength="6"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5"/>
         <p v-if="isHiveNameInvalid" id="error" class="mt-2 text-xs text-red-600">The name you entered is too short </p>
     </div>
@@ -14,6 +16,8 @@
       <input type="number"
         v-model="weight"
         placeholder="weight" 
+        required
+        min="0"
         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-yellow-500 focus:border-yellow-500 block w-full p-2.5"/>
         <p v-if="isHiveWeightInvalid" id="error" class="mt-2 text-xs text-red-600">The hive weight cannot be lower than 1 </p>
     </div>
