@@ -1,6 +1,6 @@
 <template>
-    <div class="max-w-md mx-auto">
-      <h1 class="text-3xl font-bold text-gray-900 py-6">Edit hive #{{ hive.id }}</h1>
+    <h1 class="text-3xl font-bold text-gray-900 py-6">Edit hive #{{ hive.id }}</h1>
+    <form class="max-w-md mx-auto">
       <div class="mb-5">
         <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Hive name (6 characters minimum)</label>
         <input type="text"
@@ -34,7 +34,7 @@
       <div class="text-center">
         <button @click="saveHive" class="text-black bg-yellow-500 hover:bg-yellow-600 focus:ring-4 focus:outline-none focus:ring-yellow-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center">Save my changes</button>
       </div>
-    </div>
+    </form>
 </template>
 
 <script setup>
